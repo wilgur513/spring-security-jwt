@@ -14,7 +14,7 @@ public class JWTUtils {
     public String generate(String userId) {
         return JWT.create()
             .withSubject(userId)
-            .withClaim("exp", Instant.now().getEpochSecond() + 30)
+            .withClaim("exp", Instant.now().getEpochSecond() + 3000)
             .sign(al);
     }
 
